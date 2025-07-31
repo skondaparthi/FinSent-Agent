@@ -1,4 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from sentence_transformers import SentenceTransformer
 import torch
 import numpy as np
 
@@ -16,3 +17,9 @@ def score_df(df):
     df["sent_scores"] = df['description'].apply(score)
     df['category'] = df['sent_scores'].apply(lambda x: max(x, key=x.get))
     return df
+
+
+def embed(text):
+    llm_tok = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+    encoded = llm_tok.encode(text)
+    return encoded
