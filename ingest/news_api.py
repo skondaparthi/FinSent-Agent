@@ -7,7 +7,7 @@ def find_news():
 
   url = ('https://newsapi.org/v2/everything?'
         'q=stock%20market&'
-        'from=2025-07-01&'
+        'from=2025-07-15&'
         'sortBy=popularity&'
         f'apiKey={API_KEY}')
 
