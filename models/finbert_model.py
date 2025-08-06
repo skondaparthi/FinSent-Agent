@@ -23,3 +23,8 @@ def embed(text):
     llm_tok = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     encoded = llm_tok.encode(text)
     return encoded
+
+def embed_df(df):
+    df["embeds"] = embed((df["title"] + " " + 
+    df['description']).tolist()).tolist()
+    return df
