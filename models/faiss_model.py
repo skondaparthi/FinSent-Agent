@@ -1,6 +1,6 @@
 import faiss
 import numpy as np
-import finbert_model
+from . import finbert_model
 
 def create_index(df):
   embeddings = np.vstack(df['embeds']).astype('float32')
@@ -18,6 +18,7 @@ def find_similar(text, index, df, k=3):
     similars.append({
       "title": row["title"],
       "category": row["category"],
-      "dist": float(dist)
+      "dist": float(dist),
+      "sent_scores": row["sent_scores"]
     })
   return similars

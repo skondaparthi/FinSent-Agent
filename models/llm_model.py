@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def summarize_headlines(query, faiss_index, df, k=5):
+def summarize_headlines(userquery, query, faiss_index, df, k=5):
     """
     Summarizes the top k headlines based on the query.
     
@@ -28,13 +28,18 @@ def summarize_headlines(query, faiss_index, df, k=5):
     # Input for the LLM
     context_text = ""
     for headline in similar_results:
-        context_text += f"Title: {headline['title']}\nCategory: {headline['category']}\n\n"
-  
+        context_text += f"Title: {headline['title']}\n"
+        context_text += f"Category: {headline['category']}\n\n"
+        context_text += f"Sentiment Scores: {headline['sent_scores']}\n\n"
+
     # Build prompt
     prompt = f"""You are a financial news analyst. 
     Based on the following headlines and descriptions, 
     write a 4-5 sentence summary of the general trend, sentiment, and topic.
-    Say if it's worth investing in. {context_text}
+    Also, provide insights on whether it's a good idea to invest in the related stocks.
+    The user query is: {userquery}
+    Say if it's worth investing in. Bring up past articles and what connotation
+    they had in relation to investing in them {context_text}
     Summary:"""
 
     # Call OpenAI LLM (gpt-4 or gpt-3.5)

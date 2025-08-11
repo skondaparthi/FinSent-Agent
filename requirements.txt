@@ -5,3 +5,5 @@ requests
 torch
 numpy
 faiss-cpu==1.10.0
+python-dotenv
+openai
