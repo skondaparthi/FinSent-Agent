@@ -32,7 +32,6 @@ def main():
         query = "Should I invest in Tesla right now? What is the market sentiment towards it?"
 
     summary, _ = summarize_headlines(
-        userquery=query,
         query=query,
         faiss_index=faiss_index,
         df=news_df,
