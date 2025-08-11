@@ -4,4 +4,4 @@ sentence-transformers
 requests
 torch
 numpy
-faiss-cpu
+faiss-cpu==1.10.0
