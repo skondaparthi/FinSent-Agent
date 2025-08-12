@@ -2,7 +2,7 @@
 
 A sophisticated financial sentiment analysis AI-agent that fetches real-time market news, analyzes sentiment using FinBERT, and provides AI-powered summaries to help with investment decisions.
 
-## 🚀 Features
+## Features
 
 - **Real-time News Fetching**: Automatically retrieves latest trending financial news from multiple sources
 - **Advanced Sentiment Analysis**: Uses FinBERT (Financial BERT) model for accurate financial sentiment scoring and embedding
@@ -10,7 +10,7 @@ A sophisticated financial sentiment analysis AI-agent that fetches real-time mar
 - **AI-Powered Summaries**: OpenAI GPT integration for intelligent market sentiment summaries
 - **Interactive Queries**: Ask specific questions about market sentiment and get tailored insights
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Python 3.11+**
 - **Transformers & FinBERT**: Financial sentiment analysis
@@ -20,13 +20,13 @@ A sophisticated financial sentiment analysis AI-agent that fetches real-time mar
 - **pandas**: Data manipulation and analysis
 - **News API**: Real-time news data ingestion
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.11 or higher
 - OpenAI API key
 - News API key
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -76,7 +76,7 @@ FinSent-Agent/
 └── README.md              # This file
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### API Keys Setup
 
@@ -89,7 +89,7 @@ OPENAI_API_KEY=sk-your-actual-openai-key
 NEWS_API_KEY=your-actual-news-api-key
 ```
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Basic Usage
 Run the script and enter your query when prompted:
@@ -104,7 +104,7 @@ Enter a query to summarize market news: Tesla stock analysis
 - "Tech stock outlook"
 - "Federal Reserve interest rate impact"
 
-## 🧠 How It Works
+## How It Works
 
 1. **News Ingestion**: Fetches latest financial news from News API
 2. **Sentiment Scoring**: FinBERT analyzes each article for financial sentiment
@@ -113,21 +113,21 @@ Enter a query to summarize market news: Tesla stock analysis
 5. **Query Processing**: Finds articles relevant to your specific query
 6. **AI Summarization**: OpenAI GPT generates comprehensive market insights
 
-## 📊 Output Example
+## Output Example
 
 ```
 Summary of Market News:
 The current market sentiment surrounding Tesla appears predominantly positive, despite some underlying concerns. Recent headlines highlight optimism about potential investment returns, with Elon Musk suggesting that a $150,000 investment could lead to millionaire status. Additionally, there's a recognition that Tesla is evolving beyond just a car manufacturer, which could open up new revenue streams. However, analysts express caution regarding dwindling sales and critical revenue sources, indicating a mixed outlook. Given this context, investing in Tesla could be worthwhile for those who believe in its long-term vision and innovations, but potential investors should remain aware of the challenges the company faces in the short term.
 ```
 
-## 🔍 Advanced Features
+## Advanced Features
 
 - **Semantic Search**: Find articles similar to your specific interests
 - **Multi-source Analysis**: Aggregates sentiment from diverse news sources
 - **Customizable Analysis**: Adjust the number of articles analyzed (k parameter)
 - **Real-time Processing**: Always uses the latest available market news
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -142,7 +142,7 @@ The current market sentiment surrounding Tesla appears predominantly positive, d
 - **API Errors**: Check your API keys and quotas
 - **No Articles Found**: Try broader search terms or check News API status, or change date so that it is within one month of current date (NewsAPI limitation)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -150,18 +150,18 @@ The current market sentiment surrounding Tesla appears predominantly positive, d
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **FinBERT**: For financial sentiment analysis capabilities
 - **FAISS**: For efficient similarity search
 - **OpenAI**: For advanced text generation
 - **News API**: For real-time news data
 
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions:
 1. Check the troubleshooting section above
@@ -170,4 +170,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Happy Trading! 📈**
+**Happy Trading!**
